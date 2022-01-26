@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
     massageOne.textContent = 'Loading...'
     massageTwo.textContent = ''
 
-    const url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location)
+    const url = '/weather?address=' + encodeURIComponent(location)
     fetch( url ).then((response) => {
         response.json().then(({ error, location, forecast } = data) => {
             if (error) {
